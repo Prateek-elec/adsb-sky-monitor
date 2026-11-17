@@ -1,0 +1,22 @@
+# OS / editor
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+~$*
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+# Secrets
+.env
+*.key
+*.pem
+# Claude Code local config
+.claude/
+# Project-specific
+adsb_logs/
+sat_cache/
+adsb_monitor_settings.json
+kestrel_appendix/
