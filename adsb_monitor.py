@@ -73,9 +73,9 @@ DEFAULT_SETTINGS = {
     "com_port": "",
     "baud": 115200,
     "share_with_mp": True,
-    "home_lat": 29.8543,     # Roorkee
-    "home_lon": 77.8880,
-    "home_alt_m": 268.0,
+    "home_lat": 51.4769,     # placeholder (Greenwich): set your own in Settings > Location
+    "home_lon": -0.0005,
+    "home_alt_m": 46.0,
     "alert_km": 0.0,         # 0 = unlimited: alarm for every aircraft the receiver hears
     "online_lookup": True,
     "alarm": True,
@@ -1621,7 +1621,7 @@ class App(tk.Tk):
                 new["sound_device"] = "" if dev_var.get() == default_label else dev_var.get()
                 new["volume"] = int(vol_var.get())
             except ValueError:
-                err.configure(text="Check the values - location as 'lat, lon', e.g. 29.8543, 77.8880")
+                err.configure(text="Check the values - location as 'lat, lon', e.g. 51.4769, -0.0005")
                 return
             restart_link = any(new[k] != s[k] for k in ("connection", "com_port", "baud", "udp_port", "share_with_mp"))
             restart_sats = any(new[k] != s[k] for k in ("satellites", "sat_starlink"))
